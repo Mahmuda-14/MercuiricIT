@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
-import Login from "../pages/Login/Login";
+import {  Outlet } from "react-router-dom";
+
 
 
 const Main = () => {
     return (
         <div>
-            <Login></Login>
-           
+            <Outlet></Outlet>        
         </div>
     );
 };
