@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <div>
             <Login></Login>
-            <button className="btn-circle">submit</button>
+           
         </div>
     );
 };

@@ -9,7 +9,7 @@ const Login = () => {
     const { signIn } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
+    // const location = useLocation();
     const handleLogin = (e) => {
       e.preventDefault();
       const email = e.target.email.value;
@@ -21,9 +21,10 @@ const Login = () => {
         .then((result) => {
           console.log(result.user);
           toast("Successfully logged in");
-          setTimeout(() => {
-            navigate(location?.state ? location.state : "/");
-          }, 2000);
+        //   setTimeout(() => {
+        //     navigate(location?.state ? location.state : "/");
+            
+        //   }, 2000);
         })
         .catch((error) => {
           console.error(error);
@@ -31,7 +32,21 @@ const Login = () => {
         });
     };
     return (
-        <div>
+        // https://extremelab.tech/assets/images/bg-01.jpg
+        <div className="flex flex-col-reverse lg:flex-row justify-evenly h-screen items-center">
+            {/* left side  */}
+        <div className="w-1/2 relative h-full flex items-center justify-center bg-primeColor bg-opacity-25">
+          <img
+            className="w-4/5 opacity-10 absolute"
+            src="https://extremelab.tech/assets/images/bg-01.jpg"
+            alt="logo"
+          />
+          <h2 className="text-9xl tracking-wider font-stylish text-blue-700">
+            <span className=" font-stylish ">Extreme</span>Lab
+          </h2>
+        </div>
+
+        {/* right side */}
             <div className="hero-content flex-col ">
         <div className="text-center ">
           <h1 className="text-5xl font-bold text-blue-700">Login now!</h1>
@@ -93,7 +108,7 @@ const Login = () => {
           <p className="p-3 text-center">
             New here? Please
             <Link to="/register">
-              <button className="btn btn-link text-white">Register</button>
+              <button className="btn btn-link text-blue-700">Register</button>
             </Link>
           </p>
         </div>
