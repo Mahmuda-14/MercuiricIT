@@ -25,7 +25,7 @@ const Create = () => {
 
         // send data to the server
        
-        fetch('http://localhost:5000/profile', {
+        fetch('https://internship-task-merquireit-server.vercel.app/profile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

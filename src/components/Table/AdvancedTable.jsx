@@ -11,7 +11,7 @@ const AdvancedTable = () => {
     const [users,setUsers]=useState([])
     const [realUsers,setRealUsers]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/itemsCount")
+        fetch("https://internship-task-merquireit-server.vercel.app/itemsCount")
         .then(res=>res.json())
         .then(data=>setCount(data))
         // console.log({count})
@@ -31,7 +31,7 @@ pages.push(i)
 // console.log(pages)
 
 useEffect(() => {
-    fetch(`http://localhost:5000/items?page=${currentPage}&size=${itemsPerPage}`, {
+    fetch(`https://internship-task-merquireit-server.vercel.app/items?page=${currentPage}&size=${itemsPerPage}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

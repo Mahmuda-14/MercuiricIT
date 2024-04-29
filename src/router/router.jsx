@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
       {
         path: "update/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/updateItem/${params.id}`)
+        loader: ({ params }) => fetch(`https://internship-task-merquireit-server.vercel.app/updateItem/${params.id}`)
 
       },
       {
