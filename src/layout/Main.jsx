@@ -1,4 +1,4 @@
-import {  Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Login from "../pages/Login/Login";
 
 
@@ -6,8 +6,8 @@ import Login from "../pages/Login/Login";
 const Main = () => {
     return (
         <div>
-            <Outlet></Outlet>   
-              <Login></Login>   
+         <Link to="/login"><button className="btn-primary">login</button> </Link> 
+            <Outlet></Outlet> 
         </div>
     );
 };
