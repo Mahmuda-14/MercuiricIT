@@ -22,10 +22,10 @@ const Login = () => {
         .then((result) => {
           console.log(result.user);
           toast("Successfully logged in");
-        //   setTimeout(() => {
-        //     navigate(location?.state ? location.state : "/");
+          setTimeout(() => {
+            navigate(location?.state ? location.state : "/dashboard");
             
-        //   }, 2000);
+          }, 2000);
         })
         .catch((error) => {
           console.error(error);
