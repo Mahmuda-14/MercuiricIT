@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import "./AdvancedTable.css"
 import { DiVim } from 'react-icons/di';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import { Link } from 'react-router-dom';
 
 const AdvancedTable = () => {
     // pagination
@@ -10,7 +11,7 @@ const AdvancedTable = () => {
     const [users,setUsers]=useState([])
     const [realUsers,setRealUsers]=useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/itemsCount")
+        fetch("https://internship-task-merquireit-server.vercel.app/itemsCount")
         .then(res=>res.json())
         .then(data=>setCount(data))
         // console.log({count})
@@ -30,7 +31,7 @@ pages.push(i)
 // console.log(pages)
 
 useEffect(() => {
-    fetch(`http://localhost:5000/items?page=${currentPage}&size=${itemsPerPage}`, {
+    fetch(`https://internship-task-merquireit-server.vercel.app/items?page=${currentPage}&size=${itemsPerPage}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -85,6 +86,7 @@ console.log("real users",realUsers)
         <th>Phone Number</th>
         <th>Age</th>
         <th>Company</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -95,6 +97,7 @@ console.log("real users",realUsers)
         <td>{user?.phone}</td>
         <td>{user?.age}</td>
         <td>{user?.company}</td>
+        <td><Link to={`/dashboard/update/${user._id}`}><button className='btn bg-blue-200'>Edit</button></Link></td>
       </tr>)}
       
      

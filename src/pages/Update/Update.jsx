@@ -30,7 +30,7 @@ const Update = () => {
         console.log(updatedItem);
 
         // send data to the server
-        fetch(`http://localhost:5000/profile/${_id}`, {
+        fetch(`https://internship-task-merquireit-server.vercel.app/profile/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
