@@ -19,8 +19,7 @@ const AdvancedTable = () => {
     const[currentPage,setCurrentPage]=useState(0)
    const numberOfPages=Math.ceil(total/itemsPerPage)
    console.log( numberOfPages)
-// const pages=[...Array(numberOfPages).keys()]
-// console.log(pages)
+
 
 const pages=[]
 for(let i=0;i < numberOfPages;i++){
