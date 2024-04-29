@@ -3,90 +3,74 @@
 import Navbar from "../../Shared/Navbar/Navbar";
 
 import { NavLink, Outlet, Route } from "react-router-dom";
-import Update from "../Update/Update";
-
-
+import { CgProfile } from "react-icons/cg";
+import { LiaFileInvoiceSolid } from "react-icons/lia";
+import { TbReportSearch } from "react-icons/tb";
+import { FaMapMarked } from "react-icons/fa";
+import { FaFlaskVial } from "react-icons/fa6";
+import { IoFlask } from "react-icons/io5";
+import { FaTablets } from "react-icons/fa";
 const Home = () => {
     return (
         <div className="relative">
-           <div className="absolute z-10 w-[100%]">
-           <Navbar></Navbar>
-           </div>
+            <div className="fixed z-10 w-[100%]">
+                <Navbar></Navbar>
+            </div>
             <div className="flex">
-            <div className="fixed mt-16 left-0 top-0 h-full w-64 bg-blue-200 border-y-4 border-y-blue-700 overflow-y-auto">
-                <h2 className="text-center mb-11 mt-8 font-bold text-2xl">Dashboard</h2>
-                <hr />
+                <div className="fixed mt-16 left-0 top-0 h-full w-64 bg-blue-200 border-y-4 border-y-blue-700 overflow-y-auto">
+                    <h2 className="text-center mb-11 mt-8 font-bold text-2xl">Dashboard</h2>
+                    <hr />
 
-                <ul className="menu p-4 ">
-                    <li>
-                        <NavLink to="/dashboard/profile">
-                            Profile
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/invoice">
-                            Invoice
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/reports">
-                            Reports
-                        </NavLink>
-                    </li>
-                    
-                    <li>
-                        <NavLink to="/dashboard/branches">
-                            Branches
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/tests">
-                            Tests
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/cultures">
-                            Cultures
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/cultureOptions">
-                            CultureOptions
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/antibiotics">
-                            Antibiotics
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/doctor">
-                            Doctor
-                        </NavLink>
-                    </li>
-                    <details className=" menu">
-                        <summary className=" btn bg-black text-white">PriceList</summary>
-                        <ul className=" p-4">
-                            <li>
-                                <NavLink to="/dashboard/test">
-                                    Test
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/dashboard/culture">
-                                    Culture
-                                </NavLink>
-                            </li>
+                    <ul className="menu p-4 ">
+                        <li>
+                            <NavLink to="/dashboard/profile">
+                                <CgProfile />   Profile
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/invoice">
+                                <LiaFileInvoiceSolid /> Invoice
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/reports">
+                                <TbReportSearch />  Reports
+                            </NavLink>
+                        </li>
 
-                        </ul>
-                    </details>
-                </ul>
-                <details className=" menu">
-                    <summary className=" btn">Form</summary>
-                    <ul className=" p-4">
+                        <li>
+                            <NavLink to="/dashboard/branches">
+                                <FaMapMarked />Branches
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/tests">
+                                <FaFlaskVial />  Tests
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/cultures">
+                                <IoFlask /> Cultures
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/cultureOptions">
+                                CultureOptions
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/antibiotics">
+                                Antibiotics
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/doctor">
+                                Doctor
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink to="/dashboard/create">
-                                Create
+                                Create Form
                             </NavLink>
                         </li>
                         <li>
@@ -94,24 +78,35 @@ const Home = () => {
                                 Table
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/dashboard/update/:id">
-                                Update
-                            </NavLink>
-                        </li>
+                        <details className=" menu ">
+                            <summary className=" ">PriceList</summary>
+                            <ul className="">
+                                <li>
+                                    <NavLink to="/dashboard/test">
+                                        Test
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/culture">
+                                        Culture
+                                    </NavLink>
+                                </li>
 
+                            </ul>
+                        </details>
+                       
                     </ul>
-                </details>
 
 
+
+                </div>
+
+                <div className="flex-1 ml-64">
+                    <Outlet />
+
+                    {/*  */}
+                </div>
             </div>
-
-            <div className="flex-1 ml-64">
-                <Outlet />
-
-                {/*  */}
-            </div>
-        </div>
         </div>
     );
 };

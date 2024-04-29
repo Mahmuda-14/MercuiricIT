@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 
 const Update = () => {
@@ -57,6 +58,7 @@ const Update = () => {
 
     return (
         <div>
+            <SectionTitle subheading={"Update Profile"} heading={"Table"}></SectionTitle>
             <form onSubmit={handleUpdateItem}>
 
                 <div className="space-y-12 bg-gray-50 p-10 ml-[52px] mt-[73px] mr-[85px]">
