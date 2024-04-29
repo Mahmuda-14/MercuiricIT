@@ -48,7 +48,7 @@ const Create = () => {
 
     return (
         <div>
-            <SectionTitle subheading={"Create Your Profile"} heading={"Table"}></SectionTitle>
+            <SectionTitle subheading={"Create Your Profile"} heading={"Create"}></SectionTitle>
 
             <form onSubmit={handleAddProduct}>
 
