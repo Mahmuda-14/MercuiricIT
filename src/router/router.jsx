@@ -53,21 +53,22 @@ export const router = createBrowserRouter([
     element: <Home></Home>,
     children: [
 
-    
+
       {
         path: "create",
         element: <Create></Create>
-    },
-      
+      },
+
       {
         path: "table",
         element: <AdvancedTable></AdvancedTable>
 
       },
-      
+
       {
         path: "update",
-        element: <Update></Update>
+        element: <Update></Update>,
+        loader: ({ params }) => fetch(`http://localhost:5000/profile/${params.id}`)
 
       },
       {
