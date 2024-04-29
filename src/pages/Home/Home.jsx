@@ -7,22 +7,26 @@ const Home = () => {
             <div className="fixed left-0 top-0 h-full w-64 bg-blue-200 border-y-4 border-y-blue-700 overflow-y-auto">
                 <h2 className="text-center mb-11 mt-8 font-bold text-2xl">Dashboard</h2>
                 <hr />
-                <ul className="menu p-4">
+                <details className=" menu">
+                    <summary className=" btn">form</summary>
+                <ul className=" p-4">
                     <li>
-                        <NavLink to="/dashboard/new">
+                        <NavLink to="/dashboard/create">
                             Create
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/dashboard/update">
-                          Update
+                            Update
                         </NavLink>
                     </li>
-                   
+
                 </ul>
+                </details>
+               
             </div>
 
-            <div className="flex-1 ml-64"> 
+            <div className="flex-1 ml-64">
                 <Outlet />
             </div>
         </div>
