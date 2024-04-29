@@ -12,8 +12,7 @@ import Home from "../pages/Home/Home";
 import Create from "../pages/Create/Create";
 import Update from "../pages/Update/Update";
 import New from "../New";
-// import New from "../pages/New";
-// import New from "../pages/new";
+
 
 export const router = createBrowserRouter([
   {
