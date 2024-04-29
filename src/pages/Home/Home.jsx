@@ -17,7 +17,7 @@ const Home = () => {
                 <h2 className="text-center mb-11 mt-8 font-bold text-2xl">Dashboard</h2>
                 <hr />
 
-                <ul className="mx-7">
+                <ul className="menu ">
                     <li>
                         <NavLink to="/dashboard/profile">
                             Profile
@@ -99,7 +99,7 @@ const Home = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/dashboard/update">
+                            <NavLink to="/dashboard/update/:id">
                                 Update
                             </NavLink>
                         </li>
