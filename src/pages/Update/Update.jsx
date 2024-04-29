@@ -30,7 +30,7 @@ const Update = () => {
 
         // send data to the server
         fetch(`http://localhost:5000/profile/${_id}`, {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
             },
