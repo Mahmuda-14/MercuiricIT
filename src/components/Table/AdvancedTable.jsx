@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import "./AdvancedTable.css"
 import { DiVim } from 'react-icons/di';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import { Link } from 'react-router-dom';
 
 const AdvancedTable = () => {
     // pagination
@@ -96,7 +97,7 @@ console.log("real users",realUsers)
         <td>{user?.phone}</td>
         <td>{user?.age}</td>
         <td>{user?.company}</td>
-        <td><button className='btn bg-blue-200'>Edit</button></td>
+        <td><Link to={`/dashboard/update/${user._id}`}><button className='btn bg-blue-200'>Edit</button></Link></td>
       </tr>)}
       
      
