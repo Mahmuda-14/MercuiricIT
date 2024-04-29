@@ -20,12 +20,14 @@ const Create = () => {
 
 
 
-        const product = { fname,lname,email,country,company,address,age,phone }
+        const product = { fname, lname, email, country, company, address, age, phone }
         console.log(product);
 
         // send data to the server
+
        
         fetch('https://internship-task-merquireit-server.vercel.app/profile', {
+
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -70,7 +72,7 @@ const Create = () => {
                                     <input required type="text" name="lname" id="last-name" autocomplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 /sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
-{/*  */}
+                            {/*  */}
                             <div className="sm:col-span-6">
                                 <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                                 <div className="mt-2">
@@ -126,7 +128,7 @@ const Create = () => {
                                 <label for="postal-code" className="block text-sm font-medium leading-6 text-gray-900">Phone</label>
                                 <div className="mt-2">
                                     <input required type="tel" name="code" id="postal-code" autocomplete="postal-code" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-                                   
+
                                 </div>
                             </div>
                         </div>
