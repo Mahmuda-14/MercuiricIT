@@ -9,21 +9,30 @@ const Home = () => {
                 <hr />
                 <details className=" menu">
                     <summary className=" btn">form</summary>
-                <ul className=" p-4">
-                    <li>
-                        <NavLink to="/dashboard/create">
-                            Create
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/update">
-                            Update
-                        </NavLink>
-                    </li>
+                    <ul className="p-4">
+                        <li>
+                            <NavLink to="/dashboard/create">
+                                Create
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/update">
+                                Update
+                            </NavLink>
+                        </li>
 
-                </ul>
+                    </ul>
+                   
                 </details>
-               
+
+                <ul className="menu p-4">
+                        <li>
+                            <NavLink to="/dashboard/create">
+                                Create
+                            </NavLink>
+                        </li>
+                    </ul>
+
             </div>
 
             <div className="flex-1 ml-64">
