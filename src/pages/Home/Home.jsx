@@ -101,7 +101,7 @@ const Home = () => {
 
                 </div>
 
-                <div className="flex-1 ml-64">
+                <div className="flex-1 ml-64 mt-20">
                     <Outlet />
 
                     {/*  */}
