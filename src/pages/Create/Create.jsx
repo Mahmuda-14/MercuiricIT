@@ -14,13 +14,13 @@ const Create = () => {
         const email = form.email.value;
         const country = form.country.value;
         const address = form.address.value;
-        const city = form.city.value;
-        const region = form.region.value;
-        const code = form.code.value;
+        const company = form.city.value;
+        const age = form.region.value;
+        const phone = form.code.value;
 
 
 
-        const product = { fname,lname,email,country,city,address,region,code }
+        const product = { fname,lname,email,country,company,address,age,phone }
 
         console.log(product);
 
@@ -59,7 +59,7 @@ const Create = () => {
                             <div className="sm:col-span-3">
                                 <label for="first-name" className="block text-sm font-medium leading-6 text-gray-900">First name</label>
                                 <div className="mt-2">
-                                    <input type="text" name="fname" id="first-name" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 /sm:text-sm sm:leading-6" />
+                                    <input required type="text" name="fname" id="first-name" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 /sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
 
@@ -68,14 +68,14 @@ const Create = () => {
                             <div className="sm:col-span-3">
                                 <label for="last-name" className="block text-sm font-medium leading-6 text-gray-900">Last name</label>
                                 <div className="mt-2">
-                                    <input type="text" name="lname" id="last-name" autocomplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 /sm:text-sm sm:leading-6" />
+                                    <input required type="text" name="lname" id="last-name" autocomplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 /sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
 {/*  */}
                             <div className="sm:col-span-6">
                                 <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                                 <div className="mt-2">
-                                    <input id="email" name="email" type="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 /sm:text-sm sm:leading-6" />
+                                    <input required id="email" name="email" type="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 /sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
 
@@ -99,7 +99,7 @@ const Create = () => {
                             <div className="col-span-3">
                                 <label for="street-address" className="block text-sm font-medium leading-6 text-gray-900">Street address</label>
                                 <div className="mt-2">
-                                    <input type="text" name="address" id="street-address" autocomplete="street-address" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                    <input required type="text" name="address" id="street-address" autocomplete="street-address" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
 
@@ -108,7 +108,7 @@ const Create = () => {
                             <div className="sm:col-span-2 sm:col-start-1">
                                 <label for="city" className="block text-sm font-medium leading-6 text-gray-900">Company</label>
                                 <div className="mt-2">
-                                    <input type="text" name="city" id="city" autocomplete="address-level2" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                    <input required type="text" name="city" id="city" autocomplete="address-level2" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
 
@@ -117,7 +117,7 @@ const Create = () => {
                             <div className="sm:col-span-2">
                                 <label for="region" className="block text-sm font-medium leading-6 text-gray-900">Age</label>
                                 <div className="mt-2">
-                                    <input type="number" name="region" id="region" autocomplete="address-level1" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                    <input required type="number" name="region" id="region" autocomplete="address-level1" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                                 </div>
                             </div>
                             {/*  */}
@@ -126,7 +126,7 @@ const Create = () => {
                             <div className="sm:col-span-2">
                                 <label for="postal-code" className="block text-sm font-medium leading-6 text-gray-900">Phone</label>
                                 <div className="mt-2">
-                                    <input type="number" name="code" id="postal-code" autocomplete="postal-code" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                    <input required type="tel" name="code" id="postal-code" autocomplete="postal-code" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                                    
                                 </div>
                             </div>
