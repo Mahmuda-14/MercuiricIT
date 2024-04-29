@@ -8,7 +8,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import Main from "../layout/Main";
 import Register from "../pages/Register/Register";
-import Newp from "../pages/new/Newp";
+import Newp from "../pages/Create/Create";
 import Home from "../pages/Home/Home";
 
 export const router = createBrowserRouter([
@@ -17,18 +17,6 @@ export const router = createBrowserRouter([
     element: <Main></Main>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-
-      {
-        path: "/",
-        element: <Home></Home>
-
-      },
-      {
-        path: "/new",
-        element: <Newp></Newp>
-
-      },
-
       {
         path: "/login",
         element: <Login></Login>
@@ -37,6 +25,20 @@ export const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>
       },
+    ]
+  },
+  {
+    path: "dashboard",
+    element: <Home></Home>,
+    children: [
+
+    
+      {
+        path: "new",
+        element: <Newp></Newp>
+
+      },
+
     ]
   },
 ]);
