@@ -9,7 +9,7 @@ const Home = () => {
                 <h2 className="text-center mb-11 mt-8 font-bold text-2xl">Dashboard</h2>
                 <hr />
 
-                <ul className="menu ">
+                <ul className="menu p-4 ">
                     <li>
                         <NavLink to="/dashboard/profile">
                             Profile
@@ -25,11 +25,7 @@ const Home = () => {
                             Reports
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/dashboard/invoice">
-                            Invoice
-                        </NavLink>
-                    </li>
+                    
                     <li>
                         <NavLink to="/dashboard/branches">
                             Branches
@@ -61,7 +57,7 @@ const Home = () => {
                         </NavLink>
                     </li>
                     <details className=" menu">
-                        <summary className=" btn">PriceList</summary>
+                        <summary className=" btn bg-black text-white">PriceList</summary>
                         <ul className=" p-4">
                             <li>
                                 <NavLink to="/dashboard/test">
@@ -78,7 +74,7 @@ const Home = () => {
                     </details>
                 </ul>
                 <details className=" menu">
-                    <summary className=" btn">form</summary>
+                    <summary className=" btn">Form</summary>
                     <ul className=" p-4">
                         <li>
                             <NavLink to="/dashboard/create">
