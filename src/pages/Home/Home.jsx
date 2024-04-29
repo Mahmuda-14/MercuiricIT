@@ -1,25 +1,29 @@
 
+import { NavLink, Outlet } from "react-router-dom";
+
 const Home = () => {
     return (
-        <div>
+        <div className="flex">
+            <div className="fixed left-0 top-0 h-full w-64 bg-blue-200 border-y-4 border-y-blue-700 overflow-y-auto">
+                <h2 className="text-center mb-11 mt-8 font-bold text-2xl">Dashboard</h2>
+                <hr />
+                <ul className="menu p-4">
+                    <li>
+                        <NavLink to="/dashboard/new">
+                            Create
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/dashboard/update">
+                          Update
+                        </NavLink>
+                    </li>
+                   
+                </ul>
+            </div>
 
-
-            <div className="drawer lg:drawer-open">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
-                    {/* Page content here */}
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-
-                </div>
-                <div className="drawer-side">
-                    <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-                        {/* Sidebar content here */}
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
-                    </ul>
-
-                </div>
+            <div className="flex-1 ml-64"> 
+                <Outlet />
             </div>
         </div>
     );
