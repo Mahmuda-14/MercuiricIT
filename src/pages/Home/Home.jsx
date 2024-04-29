@@ -98,11 +98,6 @@ const Home = () => {
                                 Table
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/dashboard/update/:id">
-                                Update
-                            </NavLink>
-                        </li>
 
                     </ul>
                 </details>
