@@ -12,7 +12,7 @@ import Home from "../pages/Home/Home";
 import Create from "../pages/Create/Create";
 import Update from "../pages/Update/Update";
 
-import Table from "../components/Table/Table";
+
 import AdvancedTable from "../components/Table/AdvancedTable";
 import UserProfile from "../pages/Profile/UserProfile";
 import Invoice from "../pages/Invoice/Invoice";
@@ -57,6 +57,10 @@ export const router = createBrowserRouter([
       {
         path: "create",
         element: <Create></Create>
+      },
+      {
+        path: "validate",
+        element: <Validate></Validate>
       },
 
       {

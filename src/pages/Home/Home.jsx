@@ -10,6 +10,10 @@ import { FaMapMarked } from "react-icons/fa";
 import { FaFlaskVial } from "react-icons/fa6";
 import { IoFlask } from "react-icons/io5";
 import { FaTablets } from "react-icons/fa";
+import { FaUserDoctor } from "react-icons/fa6";
+import { IoCreateSharp } from "react-icons/io5";
+import { TbTableShortcut } from "react-icons/tb";
+import { GrValidate } from "react-icons/gr";
 const Home = () => {
     return (
         <div className="relative">
@@ -55,27 +59,32 @@ const Home = () => {
                         </li>
                         <li>
                             <NavLink to="/dashboard/cultureOptions">
-                                CultureOptions
+                              <IoFlask/>  CultureOptions
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/dashboard/antibiotics">
-                                Antibiotics
+                                <FaTablets/> Antibiotics
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/dashboard/doctor">
-                                Doctor
+                             <FaUserDoctor/>   Doctor
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/dashboard/create">
-                                Create Form
+                            <IoCreateSharp/>    Create Form
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/validate">
+                             <GrValidate/>  Validation
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/dashboard/table">
-                                Table
+                             <TbTableShortcut/>   Table
                             </NavLink>
                         </li>
                         <details className=" menu ">
