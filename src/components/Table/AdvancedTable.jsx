@@ -8,7 +8,7 @@ const AdvancedTable = () => {
     const [users,setUsers]=useState([])
     const [realUsers,setRealUsers]=useState([])
     useEffect(()=>{
-        fetch("https://swiftship-server.vercel.app/itemsCount")
+        fetch("http://localhost:5000/itemsCount")
         .then(res=>res.json())
         .then(data=>setCount(data))
         // console.log({count})
@@ -28,13 +28,29 @@ pages.push(i)
 }
 // console.log(pages)
 
-    // useEffect(() => {
-    //   axiosSecure.get(`/items?page=${currentPage}&size=${itemsPerPage}`)
-    //   .then(res=>{
-    //     setRealUsers(res.data)
-    //     setUsers(res.data)
-    //   })
-    // }, [axiosSecure,currentPage,itemsPerPage]);
+useEffect(() => {
+    fetch(`http://localhost:5000/items?page=${currentPage}&size=${itemsPerPage}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            // Add any other headers if needed
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        setRealUsers(data);
+        setUsers(data);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        
+    });
+}, [currentPage, itemsPerPage]);
 console.log("users",users)
 console.log("real users",realUsers)
     const handleItemsPerPage=e=>{
