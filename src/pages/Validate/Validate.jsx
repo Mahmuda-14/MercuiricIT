@@ -6,7 +6,7 @@ const Validate = () => {
 
     return (
         <div>
-            <SectionTitle subheading={"Check Validation"} heading={"Table"}></SectionTitle>
+            <SectionTitle subheading={"Check Validation"} heading={"Validation"}></SectionTitle>
 
             <form >
 
