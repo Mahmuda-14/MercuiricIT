@@ -14,14 +14,13 @@ const Create = () => {
         const email = form.email.value;
         const country = form.country.value;
         const address = form.address.value;
-        const city = form.city.value;
-        const region = form.region.value;
-        const code = form.code.value;
+        const company = form.city.value;
+        const age = form.region.value;
+        const phone = form.code.value;
 
 
 
-        const product = { fname,lname,email,country,city,address,region,code }
-
+        const product = { fname,lname,email,country,company,address,age,phone }
         console.log(product);
 
         // send data to the server
@@ -48,7 +47,7 @@ const Create = () => {
         <div>
 
             <form onSubmit={handleAddProduct}>
-{/* onSubmit={handleAddProduct} */}
+
                 <div className="space-y-12 bg-gray-50 p-10 ml-[52px] mt-[73px] mr-[85px]">
 
                     <div className="border-b border-gray-900/10 pb-12">
