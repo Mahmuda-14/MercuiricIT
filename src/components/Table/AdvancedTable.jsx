@@ -85,6 +85,7 @@ console.log("real users",realUsers)
         <th>Phone Number</th>
         <th>Age</th>
         <th>Company</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -95,6 +96,7 @@ console.log("real users",realUsers)
         <td>{user?.phone}</td>
         <td>{user?.age}</td>
         <td>{user?.company}</td>
+        <td><button className='btn bg-blue-200'>Edit</button></td>
       </tr>)}
       
      
