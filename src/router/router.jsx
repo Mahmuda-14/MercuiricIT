@@ -11,6 +11,7 @@ import Register from "../pages/Register/Register";
 import Home from "../pages/Home/Home";
 import Create from "../pages/Create/Create";
 import Update from "../pages/Update/Update";
+
 import Table from "../components/Table/Table";
 import AdvancedTable from "../components/Table/AdvancedTable";
 import UserProfile from "../pages/Profile/UserProfile";
@@ -23,6 +24,9 @@ import CultureOptions from "../pages/CultureOptions/CultureOptions";
 import Antibiotics from "../pages/Antibiotics/Antibiotics";
 import Doctor from "../pages/Doctor/Doctor";
 
+import New from "../New";
+
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -30,12 +34,16 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/login",
-        element: <Login></Login>
+        path: "/",
+        element: <New></New>
       },
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
       },
     ]
   },
@@ -48,8 +56,8 @@ export const router = createBrowserRouter([
       {
         path: "create",
         element: <Create></Create>
-
-      },
+    },
+      
       {
         path: "table",
         element: <AdvancedTable></AdvancedTable>
@@ -105,6 +113,8 @@ export const router = createBrowserRouter([
         path: "doctor",
         element: <Doctor></Doctor>
       },
+
+
 
 
 
