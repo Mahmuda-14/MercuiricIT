@@ -20,18 +20,23 @@ const Home = () => {
                                 Update
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/dashboard/validate">
+                               Validate
+                            </NavLink>
+                        </li>
 
                     </ul>
-                   
+
                 </details>
 
-                <ul className="menu p-4">
+                {/* <ul className="menu p-4">
                         <li>
                             <NavLink to="/dashboard/create">
                                 Create
                             </NavLink>
                         </li>
-                    </ul>
+                    </ul> */}
 
             </div>
 

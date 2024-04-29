@@ -12,6 +12,7 @@ import Home from "../pages/Home/Home";
 import Create from "../pages/Create/Create";
 import Update from "../pages/Update/Update";
 import New from "../New";
+import Validate from "../pages/Validate/Validate";
 
 
 export const router = createBrowserRouter([
@@ -49,6 +50,11 @@ export const router = createBrowserRouter([
       {
         path: "update",
         element: <Update></Update>
+
+      },
+      {
+        path: "validate",
+        element: <Validate></Validate>
 
       },
 
