@@ -25,6 +25,7 @@ import Antibiotics from "../pages/Antibiotics/Antibiotics";
 import Doctor from "../pages/Doctor/Doctor";
 
 import New from "../New";
+import Validate from "../pages/Validate/Validate";
 
 
 export const router = createBrowserRouter([
