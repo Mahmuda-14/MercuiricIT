@@ -1,3 +1,4 @@
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 
 const Create = () => {
@@ -47,6 +48,7 @@ const Create = () => {
 
     return (
         <div>
+            <SectionTitle subheading={"Create Your Profile"} heading={"Table"}></SectionTitle>
 
             <form onSubmit={handleAddProduct}>
 
