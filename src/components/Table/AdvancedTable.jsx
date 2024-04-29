@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import "./AdvancedTable.css"
+import { DiVim } from 'react-icons/di';
+import SectionTitle from '../SectionTitle/SectionTitle';
 
 const AdvancedTable = () => {
     // pagination
@@ -8,7 +10,7 @@ const AdvancedTable = () => {
     const [users,setUsers]=useState([])
     const [realUsers,setRealUsers]=useState([])
     useEffect(()=>{
-        fetch("https://swiftship-server.vercel.app/itemsCount")
+        fetch("http://localhost:5000/itemsCount")
         .then(res=>res.json())
         .then(data=>setCount(data))
         // console.log({count})
@@ -19,8 +21,7 @@ const AdvancedTable = () => {
     const[currentPage,setCurrentPage]=useState(0)
    const numberOfPages=Math.ceil(total/itemsPerPage)
    console.log( numberOfPages)
-// const pages=[...Array(numberOfPages).keys()]
-// console.log(pages)
+
 
 const pages=[]
 for(let i=0;i < numberOfPages;i++){
@@ -28,13 +29,29 @@ pages.push(i)
 }
 // console.log(pages)
 
-    // useEffect(() => {
-    //   axiosSecure.get(`/items?page=${currentPage}&size=${itemsPerPage}`)
-    //   .then(res=>{
-    //     setRealUsers(res.data)
-    //     setUsers(res.data)
-    //   })
-    // }, [axiosSecure,currentPage,itemsPerPage]);
+useEffect(() => {
+    fetch(`http://localhost:5000/items?page=${currentPage}&size=${itemsPerPage}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            // Add any other headers if needed
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        setRealUsers(data);
+        setUsers(data);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        
+    });
+}, [currentPage, itemsPerPage]);
 console.log("users",users)
 console.log("real users",realUsers)
     const handleItemsPerPage=e=>{
@@ -56,11 +73,13 @@ console.log("real users",realUsers)
 
     return (
             <div>
+                <SectionTitle subheading={"All User's Information"} heading={"Table"}></SectionTitle>
+                <div className='space-y-12 bg-gray-50 p-10 ml-[52px] mt-[73px] mr-[85px]'>
             <div className="overflow-x-auto">
   <table className="table  table-xs overflow-x-auto">
     {/* head */}
     <thead>
-      <tr>
+      <tr className='text-sm font-medium leading-6 text-gray-900'>
         <th>ID</th>
         <th>Name</th>
         <th>Phone Number</th>
@@ -70,9 +89,9 @@ console.log("real users",realUsers)
     </thead>
     <tbody>
        {users.map((user,index)=>
-      <tr key={user._id}>
+      <tr key={user._id} className='text-xs bg-gray-100 p-5 font-medium leading-6 '>
         <th>{index+1}</th>
-        <td>{user?.name}</td>
+        <td>{user?.fname}</td>
         <td>{user?.phone}</td>
         <td>{user?.age}</td>
         <td>{user?.company}</td>
@@ -103,6 +122,7 @@ console.log("real users",realUsers)
                 <option value="50">50</option>
             </select>
             
+            </div>
             </div>
             </div>
     );
