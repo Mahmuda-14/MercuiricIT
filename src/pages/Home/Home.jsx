@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -17,9 +18,12 @@ const Home = () => {
                         {/* Sidebar content here */}
                         <li><a>Sidebar Item 1</a></li>
                         <li><a>Sidebar Item 2</a></li>
+                        <li><Link to={"/table"}>Table</Link></li>
+                        <Link to={"/login"}><button>Login</button></Link>
                     </ul>
 
                 </div>
+
             </div>
         </div>
     );
