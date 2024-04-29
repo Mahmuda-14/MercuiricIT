@@ -34,7 +34,7 @@ const Register = () => {
   
       // sign in user
   
-      const result = await createUser(profile, email, password)
+      const result = await createUser(email, password)
         .then(async (result) => {
           console.log(result);
        })
