@@ -1,5 +1,5 @@
 import {   useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import {  Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
@@ -108,9 +108,10 @@ const Login = () => {
   
           <p className="p-3 text-center">
             New here? Please
-            <Link to="/register">
+            <Link
+            to="/register">
               <button className="btn btn-link text-blue-700">Register</button>
-            </Link>
+ </Link>
           </p>
         </div>
         <ToastContainer />

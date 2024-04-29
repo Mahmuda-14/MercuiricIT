@@ -8,8 +8,20 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import Main from "../layout/Main";
 import Register from "../pages/Register/Register";
-import Newp from "../pages/Create/Create";
 import Home from "../pages/Home/Home";
+import Create from "../pages/Create/Create";
+import Update from "../pages/Update/Update";
+import Table from "../components/Table/Table";
+import AdvancedTable from "../components/Table/AdvancedTable";
+import UserProfile from "../pages/Profile/UserProfile";
+import Invoice from "../pages/Invoice/Invoice";
+import Reports from "../pages/Reports/Reports";
+import Branches from "../pages/Branches/Branches";
+import Tests from "../pages/Tests/Tests";
+import Cultures from "../pages/Cultures/Cultures";
+import CultureOptions from "../pages/CultureOptions/CultureOptions";
+import Antibiotics from "../pages/Antibiotics/Antibiotics";
+import Doctor from "../pages/Doctor/Doctor";
 
 export const router = createBrowserRouter([
   {
@@ -34,10 +46,67 @@ export const router = createBrowserRouter([
 
     
       {
-        path: "new",
-        element: <Newp></Newp>
+        path: "create",
+        element: <Create></Create>
 
       },
+      {
+        path: "table",
+        element: <AdvancedTable></AdvancedTable>
+
+      },
+      
+      {
+        path: "update",
+        element: <Update></Update>
+
+      },
+      {
+        path: "profile",
+        element: <UserProfile></UserProfile>
+
+      },
+      {
+        path: "invoice",
+        element: <Invoice></Invoice>
+
+      },
+      {
+        path: "reports",
+        element: <Reports></Reports>
+
+      },
+      {
+        path: "branches",
+        element: <Branches></Branches>
+
+      },
+      {
+        path: "tests",
+        element: <Tests></Tests>
+
+      },
+      {
+        path: "cultures",
+        element: <Cultures></Cultures>
+
+      },
+      {
+        path: "cultureOptions",
+        element: <CultureOptions></CultureOptions>
+
+      },
+      {
+        path: "antibiotics",
+        element: <Antibiotics></Antibiotics>
+
+      },
+      {
+        path: "doctor",
+        element: <Doctor></Doctor>
+      },
+
+
 
     ]
   },
