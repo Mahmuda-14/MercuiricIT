@@ -11,6 +11,9 @@ import Register from "../pages/Register/Register";
 import Home from "../pages/Home/Home";
 import Create from "../pages/Create/Create";
 import Update from "../pages/Update/Update";
+import New from "../New";
+// import New from "../pages/New";
+// import New from "../pages/new";
 
 export const router = createBrowserRouter([
   {
@@ -19,12 +22,16 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/login",
-        element: <Login></Login>
+        path: "/",
+        element: <New></New>
       },
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
       },
     ]
   },

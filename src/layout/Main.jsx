@@ -1,5 +1,5 @@
 import {  Outlet } from "react-router-dom";
-import Login from "../pages/Login/Login";
+// import Login from "../pages/Login/Login";
 
 
 
@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <div>
             <Outlet></Outlet>   
-              <Login></Login>   
+              {/* <Login></Login>    */}
         </div>
     );
 };
